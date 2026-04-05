@@ -70,7 +70,7 @@ export default function Navbar() {
                 </span>
               </Link>
             ))}
-            <Link href="/contatti">
+            <Link href="/partner">
               <span className="ml-4 px-5 py-2 btn-red rounded text-sm font-semibold cursor-pointer">
                 Diventa Partner
               </span>
@@ -105,7 +105,7 @@ export default function Navbar() {
                 </span>
               </Link>
             ))}
-            <Link href="/contatti">
+            <Link href="/partner">
               <span className="block mt-2 px-4 py-3 btn-red rounded text-sm font-semibold text-center cursor-pointer">
                 Diventa Partner
               </span>

@@ -97,67 +97,79 @@ export default function ChiSono() {
           </div>
 
           {/* Main bio */}
-          <div className="grid md:grid-cols-2 gap-12 items-start">
+          <div
+            className={`opacity-0 ${introRef.visible ? "animate-fadeInUp delay-200" : ""}`}
+          >
+            <div className="divider-red mb-5" />
+            <h2 className="text-3xl md:text-4xl font-black text-white mb-8">
+              Filippo Ferrari,{" "}
+              <span className="text-gradient">Roma, 4 dicembre 2005</span>
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-x-14 gap-y-5">
             <div
-              className={`opacity-0 ${introRef.visible ? "animate-slideInLeft delay-200" : ""}`}
+              className={`space-y-5 text-gray-300 leading-relaxed opacity-0 ${introRef.visible ? "animate-slideInLeft delay-300" : ""}`}
             >
-              <div className="divider-red mb-5" />
-              <h2 className="text-3xl font-black text-white mb-6">
-                Filippo Ferrari,{" "}
-                <span className="text-gradient">Roma, 4 dicembre 2005</span>
-              </h2>
-              <div className="space-y-4 text-gray-300 leading-relaxed">
-                <p>
-                  Cresce in una{" "}
-                  <strong className="text-white">
-                    famiglia di sportivi d'alto livello e appassionati di motori
-                  </strong>
-                  . Suo padre, anche lui pilota delle due ruote, ha partecipato e vinto in{" "}
-                  <strong className="text-red-400">
-                    competizioni di enduro e rally italiane ed europee
-                  </strong>
-                  , prendendo parte anche alla leggendaria{" "}
-                  <strong className="text-white">Parigi-Dakar</strong>: è proprio da lì che nasce
-                  la sua passione per le corse.
-                </p>
-                <p>
-                  A soli <strong className="text-white">sette anni</strong> sale per la prima volta
-                  su un kart 60 Mini, e da quel momento capisce che la{" "}
-                  <strong className="text-red-400">velocità</strong> sarà parte della sua vita.
-                </p>
-              </div>
+              <p>
+                Cresce in una{" "}
+                <strong className="text-white">
+                  famiglia di sportivi d'alto livello e appassionati di motori
+                </strong>
+                . Suo padre, anche lui pilota delle due ruote, ha partecipato e vinto in{" "}
+                <strong className="text-red-400">
+                  competizioni di enduro e rally italiane ed europee
+                </strong>
+                , prendendo parte anche alla leggendaria{" "}
+                <strong className="text-white">Parigi-Dakar</strong>: è proprio da lì che nasce
+                la sua passione per le corse.
+              </p>
+              <p>
+                A soli <strong className="text-white">sette anni</strong> sale per la prima volta
+                su un kart 60 Mini, e da quel momento capisce che la{" "}
+                <strong className="text-red-400">velocità</strong> sarà parte della sua vita.
+                Dopo anni di impegno nelle categorie <strong className="text-white">125 monomarcia e KZ</strong>,
+                a 16 anni debutta nelle competizioni automobilistiche con una{" "}
+                <strong className="text-red-400">Clio Cup</strong>.
+              </p>
+              <p>
+                Nel <strong className="text-white">2023</strong> prosegue con la{" "}
+                <strong className="text-red-400">Cupra TCR</strong>, consolidando esperienza e
+                performance. Nel <strong className="text-white">2024</strong> vive il momento
+                chiave della carriera testando l'{" "}
+                <strong className="text-red-400">Audi R8 GT3</strong> di{" "}
+                <strong className="text-white">Tresor Audi Sport Italia</strong>, segnando il
+                passaggio verso il mondo Gran Turismo.
+              </p>
             </div>
             <div
-              className={`opacity-0 ${introRef.visible ? "animate-slideInRight delay-300" : ""}`}
+              className={`space-y-5 text-gray-300 leading-relaxed opacity-0 ${introRef.visible ? "animate-slideInRight delay-400" : ""}`}
             >
-              <div className="space-y-4 text-gray-300 leading-relaxed mt-0 md:mt-14">
-                <p>
-                  Nel <strong className="text-white">2025</strong> viene selezionato per il{" "}
-                  <strong className="text-red-400">contest Steering Wheel Super Salita</strong>{" "}
-                  organizzato da <strong className="text-white">Wolf Racing Cars</strong> con il
-                  supporto dell' <strong className="text-white">ACI Sport</strong>, un
-                  riconoscimento importante del percorso di crescita che sta costruendo passo dopo
-                  passo.
-                </p>
-                <p>
-                  <strong className="text-white">Filippo</strong> è innanzitutto un ragazzo{" "}
-                  <strong className="text-red-400">determinato</strong>,{" "}
-                  <strong className="text-red-400">appassionato</strong> e con un{" "}
-                  <strong className="text-white">approccio professionale</strong> non solo allo
-                  sport, ma anche alla vita: mette il massimo impegno in ogni progetto, dentro e
-                  fuori dalla pista.
-                </p>
-                <p>
-                  Il suo obiettivo è{" "}
-                  <strong className="text-white">trasmettere la passione</strong>, la dedizione e i
-                  valori che lo guidano a più persone possibili, perché crede che il motorsport non
-                  sia solo velocità, ma anche{" "}
-                  <strong className="text-red-400">
-                    crescita personale, sacrificio e condivisione
-                  </strong>
-                  .
-                </p>
-              </div>
+              <p>
+                Nel <strong className="text-white">2025</strong> viene selezionato per il{" "}
+                <strong className="text-red-400">contest Steering Wheel Super Salita</strong>{" "}
+                organizzato da <strong className="text-white">Wolf Racing Cars</strong> con il
+                supporto dell' <strong className="text-white">ACI Sport</strong>: un
+                riconoscimento importante del percorso di crescita che sta costruendo passo dopo
+                passo.
+              </p>
+              <p>
+                <strong className="text-white">Filippo</strong> è innanzitutto un ragazzo{" "}
+                <strong className="text-red-400">determinato</strong>,{" "}
+                <strong className="text-red-400">appassionato</strong> e con un{" "}
+                <strong className="text-white">approccio professionale</strong> non solo allo
+                sport, ma anche alla vita: mette il massimo impegno in ogni progetto, dentro e
+                fuori dalla pista.
+              </p>
+              <p>
+                Il suo obiettivo è{" "}
+                <strong className="text-white">trasmettere la passione</strong>, la dedizione e i
+                valori che lo guidano a più persone possibili, perché crede che il motorsport non
+                sia solo velocità, ma anche{" "}
+                <strong className="text-red-400">
+                  crescita personale, sacrificio e condivisione
+                </strong>
+                .
+              </p>
             </div>
           </div>
         </div>

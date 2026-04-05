@@ -299,18 +299,25 @@ export default function Partner() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20">
-        <div className="max-w-3xl mx-auto px-4 text-center">
+      {/* CTA with photo background */}
+      <section className="relative py-28 overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${IMG6})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/85" />
+        <div className="relative z-10 max-w-3xl mx-auto px-4 text-center">
           <div className="divider-red mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-black text-white mb-4 leading-tight">
             Diventa <span className="text-gradient">Protagonista</span>
           </h2>
-          <p className="text-gray-400 mb-8">
+          <p className="text-gray-300 mb-10 text-lg leading-relaxed">
             Contattami per scoprire le opportunità di partnership su misura per la tua azienda.
+            <br className="hidden md:block" />
+            Ogni traguardo raggiunto è una conquista condivisa.
           </p>
           <Link href="/contatti">
-            <span className="inline-block px-10 py-4 btn-red rounded font-semibold text-lg cursor-pointer">
+            <span className="inline-block px-12 py-4 btn-red rounded font-semibold text-lg cursor-pointer">
               Contattami
             </span>
           </Link>
