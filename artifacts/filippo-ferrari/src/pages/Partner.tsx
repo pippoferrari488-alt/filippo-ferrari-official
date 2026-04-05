@@ -1,0 +1,321 @@
+import { Link } from "wouter";
+import { CheckCircle } from "lucide-react";
+import { useIntersection } from "@/hooks/useIntersection";
+
+const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
+const IMG1 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_776/99_cola_moncini_vanberlo_105-XL.jpg";
+const IMG2 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_839/rwdMode_1/426x291/00_grid_119-S.webp";
+const IMG3 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_719/rwdMode_1/563x450/podio_1013-X2.webp";
+const IMG4 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_783/IMG_5474.jpeg";
+const IMG5 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_840/rwdMode_1/526x357/99_cola-moncini_2011-XL.webp";
+const IMG6 = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_29/mm3aqdb1/element_722/rwdMode_1/550x460/IMG_5420.webp";
+
+const benefits = [
+  "Visibilità diretta in pista: logo sull'auto, sulla tuta, sul casco e sui materiali ufficiali.",
+  "Presenza sui media digitali: sito web, social network, comunicati stampa e contenuti dedicati.",
+  "Attività di co-branding: post, video e campagne condivise con il brand.",
+  "Esperienze esclusive: giornate in pista, eventi aziendali, hospitality nei weekend di gara.",
+  "Valorizzazione dell'immagine aziendale: il motorsport è sinonimo di eccellenza, performance e determinazione.",
+  "Networking e relazioni: accesso a un ambiente professionale e internazionale, dove le collaborazioni possono estendersi oltre il mondo delle corse.",
+];
+
+const fiscalBenefits = [
+  "Deduzione fiscale totale delle spese di sponsorizzazione.",
+  "Ritorno d'immagine e comunicazione misurabile.",
+  "Possibilità di integrare l'investimento in strategie di marketing già esistenti.",
+];
+
+const values = [
+  { title: "Professionalità", desc: "Un approccio serio e strutturato a ogni aspetto della carriera, in pista e fuori." },
+  { title: "Miglioramento Continuo", desc: "Ogni gara è un'opportunità di crescita tecnica e umana." },
+  { title: "Trasparenza", desc: "Rapporti basati sulla fiducia reciproca con partner e team." },
+  { title: "Spirito di Squadra", desc: "Nessun pilota vince da solo: il successo è condiviso." },
+];
+
+export default function Partner() {
+  const introRef = useIntersection();
+  const benefitsRef = useIntersection();
+  const fiscalRef = useIntersection();
+  const valuesRef = useIntersection();
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative h-[40vh] min-h-[280px] flex items-end overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${HERO_BG})` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-700 via-red-500 to-red-700" />
+        <div className="relative z-10 px-4 sm:px-8 lg:px-16 pb-12 animate-fadeInUp">
+          <div className="divider-red mb-4" />
+          <h1 className="text-4xl md:text-6xl font-black text-white">
+            Perché diventare{" "}
+            <span className="text-gradient">Partner</span>
+          </h1>
+        </div>
+      </section>
+
+      {/* Intro */}
+      <section
+        ref={introRef.ref as React.RefObject<HTMLElement>}
+        className="py-20"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div
+              className={`opacity-0 ${introRef.visible ? "animate-slideInLeft" : ""}`}
+            >
+              <img
+                src={IMG1}
+                alt="Filippo Ferrari in pista"
+                className="rounded-2xl w-full object-cover red-glow"
+                style={{ maxHeight: "420px", objectFit: "cover" }}
+              />
+            </div>
+            <div
+              className={`opacity-0 ${introRef.visible ? "animate-slideInRight delay-200" : ""}`}
+            >
+              <div className="divider-red mb-5" />
+              <h2 className="text-3xl font-black text-white mb-6 leading-tight">
+                Il motorsport è molto più di una{" "}
+                <span className="text-gradient">disciplina sportiva</span>
+              </h2>
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>
+                  È un <strong className="text-red-400">ecosistema di innovazione, performance
+                  e comunicazione</strong>. Ogni gara è un evento mediatico, con pubblico,
+                  stampa, social e un'immagine fortemente legata a valori positivi:{" "}
+                  <strong className="text-white">passione, tecnologia, precisione, ambizione
+                  e successo</strong>.
+                </p>
+                <p>
+                  Sostenere la carriera di un pilota come{" "}
+                  <strong className="text-white">Filippo Ferrari</strong>, significa{" "}
+                  <strong className="text-red-400">legare il proprio brand</strong> a questi
+                  valori e a un{" "}
+                  <strong className="text-white">
+                    progetto giovane, serio e in continua crescita
+                  </strong>
+                  .
+                </p>
+                <p>
+                  Chi sceglie di affiancarlo non fa solo pubblicità, ma entra a far parte di
+                  una <strong className="text-red-400">squadra</strong> che condivide obiettivi
+                  comuni: <strong className="text-white">vincere, crescere e distinguersi</strong>.
+                </p>
+              </div>
+              <div className="mt-8">
+                <Link href="/contatti">
+                  <span className="inline-block px-6 py-3 btn-red rounded font-semibold cursor-pointer">
+                    Contattami
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits */}
+      <section
+        ref={benefitsRef.ref as React.RefObject<HTMLElement>}
+        className="py-20 bg-[hsl(0_0%_6%)]"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div
+              className={`opacity-0 ${benefitsRef.visible ? "animate-slideInLeft" : ""}`}
+            >
+              <div className="divider-red mb-5" />
+              <h2 className="text-3xl font-black text-white mb-3">
+                Cosa offro ai{" "}
+                <span className="text-gradient">miei partner</span>
+              </h2>
+              <p className="text-gray-400 mb-8 leading-relaxed">
+                Ogni collaborazione è costruita su misura: non c'è una semplice esposizione del
+                marchio, ma una vera sinergia di visibilità e valore.
+              </p>
+              <ul className="space-y-4">
+                {benefits.map((b, i) => (
+                  <li
+                    key={i}
+                    className={`flex gap-3 opacity-0 ${
+                      benefitsRef.visible ? "animate-slideInLeft" : ""
+                    } delay-${(i + 1) * 100}`}
+                  >
+                    <CheckCircle
+                      size={18}
+                      className="text-red-500 shrink-0 mt-0.5"
+                    />
+                    <span className="text-gray-300 text-sm leading-relaxed">{b}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div
+              className={`opacity-0 ${benefitsRef.visible ? "animate-slideInRight delay-200" : ""}`}
+            >
+              <div className="grid grid-cols-2 gap-3">
+                <img
+                  src={IMG2}
+                  alt="In griglia"
+                  className="rounded-xl w-full object-cover"
+                  style={{ aspectRatio: "4/3", objectFit: "cover" }}
+                />
+                <img
+                  src={IMG3}
+                  alt="Sul podio"
+                  className="rounded-xl w-full object-cover"
+                  style={{ aspectRatio: "4/3", objectFit: "cover" }}
+                />
+                <img
+                  src={IMG4}
+                  alt="Filippo in pista"
+                  className="rounded-xl w-full object-cover col-span-2"
+                  style={{ aspectRatio: "16/6", objectFit: "cover" }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fiscal benefits */}
+      <section
+        ref={fiscalRef.ref as React.RefObject<HTMLElement>}
+        className="py-20"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div
+              className={`opacity-0 ${fiscalRef.visible ? "animate-slideInLeft" : ""}`}
+            >
+              <img
+                src={IMG5}
+                alt="Pista"
+                className="rounded-2xl w-full object-cover"
+                style={{ maxHeight: "380px", objectFit: "cover" }}
+              />
+            </div>
+            <div
+              className={`opacity-0 ${fiscalRef.visible ? "animate-slideInRight delay-200" : ""}`}
+            >
+              <div className="divider-red mb-5" />
+              <h2 className="text-3xl font-black text-white mb-3">
+                Vantaggi fiscali per le{" "}
+                <span className="text-gradient">aziende</span>
+              </h2>
+              <p className="text-gray-400 mb-6 leading-relaxed">
+                Sponsorizzare un pilota o un team nel motorsport non è una donazione, ma un vero{" "}
+                <strong className="text-white">investimento pubblicitario deducibile</strong>.
+              </p>
+              <p className="text-gray-300 mb-6 text-sm leading-relaxed">
+                In base alla normativa italiana, i costi di sponsorizzazione sono considerati{" "}
+                <strong className="text-white">spese di pubblicità e promozione</strong>, quindi{" "}
+                <strong className="text-red-400">deducibili al 100%</strong>, purché
+                l'investimento abbia finalità di promozione del marchio o dei prodotti aziendali.
+              </p>
+              <div className="bg-red-950/20 border border-red-500/20 rounded-xl p-6">
+                <div className="text-red-400 text-xs font-semibold tracking-widest uppercase mb-4">
+                  In sintesi
+                </div>
+                <ul className="space-y-3">
+                  {fiscalBenefits.map((b, i) => (
+                    <li key={i} className="flex gap-3">
+                      <CheckCircle size={16} className="text-red-500 shrink-0 mt-0.5" />
+                      <span className="text-gray-300 text-sm">{b}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section
+        ref={valuesRef.ref as React.RefObject<HTMLElement>}
+        className="py-20 bg-[hsl(0_0%_6%)]"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-14">
+            <div
+              className={`opacity-0 ${valuesRef.visible ? "animate-slideInLeft" : ""}`}
+            >
+              <div className="divider-red mb-5" />
+              <h2 className="text-3xl font-black text-white mb-4">
+                I nostri <span className="text-gradient">valori</span>
+              </h2>
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>
+                  Nel motorsport <strong className="text-white">nessun pilota vince da solo</strong>
+                  . Dietro ogni risultato ci sono persone, aziende e partner che condividono la
+                  stessa visione: <strong className="text-red-400">progredire costantemente</strong>{" "}
+                  e affrontare ogni sfida con determinazione.
+                </p>
+                <p>
+                  <strong className="text-white">Insieme</strong> si può dare vita a un{" "}
+                  <strong className="text-red-400">progetto ambizioso e duraturo</strong>, in cui
+                  la tua azienda non è un semplice sponsor, ma una parte attiva della squadra.
+                </p>
+                <p>
+                  Sostenere la carriera di una giovane promessa significa unire passione,
+                  competenza, serietà e impegno in un percorso comune di{" "}
+                  <strong className="text-white">visibilità, crescita e risultati concreti</strong>.
+                </p>
+              </div>
+            </div>
+            <div
+              className={`opacity-0 ${valuesRef.visible ? "animate-slideInRight delay-200" : ""}`}
+            >
+              <img
+                src={IMG6}
+                alt="Filippo in pista"
+                className="rounded-2xl w-full object-cover red-glow"
+                style={{ maxHeight: "380px", objectFit: "cover" }}
+              />
+            </div>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((v, i) => (
+              <div
+                key={v.title}
+                className={`card-hover bg-[hsl(0_0%_8%)] border border-white/5 rounded-2xl p-6 opacity-0 ${
+                  valuesRef.visible ? "animate-fadeInUp" : ""
+                } delay-${(i + 1) * 100}`}
+              >
+                <div className="w-10 h-10 rounded-full bg-red-600/20 border border-red-500/30 flex items-center justify-center mb-4">
+                  <span className="text-red-400 font-black text-sm">{i + 1}</span>
+                </div>
+                <h3 className="text-white font-bold text-lg mb-2">{v.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-20">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <div className="divider-red mx-auto mb-6" />
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+            Diventa <span className="text-gradient">Protagonista</span>
+          </h2>
+          <p className="text-gray-400 mb-8">
+            Contattami per scoprire le opportunità di partnership su misura per la tua azienda.
+          </p>
+          <Link href="/contatti">
+            <span className="inline-block px-10 py-4 btn-red rounded font-semibold text-lg cursor-pointer">
+              Contattami
+            </span>
+          </Link>
+        </div>
+      </section>
+    </>
+  );
+}

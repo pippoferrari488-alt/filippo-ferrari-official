@@ -4,6 +4,16 @@
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
 
+## Artifacts
+
+### Filippo Ferrari - Pilota (`artifacts/filippo-ferrari`)
+- React + Vite frontend-only site (no backend needed)
+- Multi-page: Home, Chi Sono, Partner, Galleria, Contatti
+- Dark racing aesthetic: black background, red accents, scroll animations
+- All content (text + photos) ported from https://dadcg8.webwave.dev
+- Pages use intersection observer for scroll-triggered animations
+- Lightbox gallery with 40+ real photos from the original site
+
 ## Stack
 
 - **Monorepo tool**: pnpm workspaces

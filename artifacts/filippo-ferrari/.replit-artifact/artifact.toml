@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Filippo Ferrari - Pilota"
+version = "1.0.0"
+id = "artifacts/filippo-ferrari"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25695
+
+[services.development]
+run = "pnpm --filter @workspace/filippo-ferrari run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/filippo-ferrari", "run", "build" ]
+publicDir = "artifacts/filippo-ferrari/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25695"
+BASE_PATH = "/"

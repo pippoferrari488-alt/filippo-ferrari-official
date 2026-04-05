@@ -1,0 +1,285 @@
+import { useEffect, useRef, useState } from "react";
+import { Link } from "wouter";
+import { ChevronDown, Play } from "lucide-react";
+import { useIntersection } from "@/hooks/useIntersection";
+
+const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_24/mm3aqfui/element_620/rwdMode_1/2400x700/99_cola_moncini_vanberlo_401-XL.webp";
+const ABOUT_IMG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_24/mm3aqfui/element_623/rwdMode_1/576x756/IMG_5399.webp";
+const PARTNER_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_24/mm3aqfui/element_751/0/rwdMode_1/2400x490/99_cola_moncini_vanberlo_105-XL.jpg";
+
+const stats = [
+  { value: "2005", label: "Anno di nascita" },
+  { value: "7", label: "Anni al primo kart" },
+  { value: "2024", label: "Audi R8 GT3" },
+  { value: "2025", label: "ACI Sport Contest" },
+];
+
+const career = [
+  { year: "2012", event: "Primo kart 60 Mini", desc: "A soli sette anni sale per la prima volta su un kart" },
+  { year: "2021", event: "Clio Cup", desc: "Debutto nelle competizioni automobilistiche a 16 anni" },
+  { year: "2023", event: "Cupra TCR", desc: "Stagione nel turismo con consolidamento di esperienza e performance" },
+  { year: "2024", event: "Audi R8 GT3", desc: "Test con la supercar di Tresor Audi Sport Italia, passaggio GT" },
+  { year: "2025", event: "ACI Sport Contest", desc: "Selezione per Steering Wheel Super Salita di Wolf Racing Cars" },
+];
+
+function Stat({ value, label, delay }: { value: string; label: string; delay: number }) {
+  const { ref, visible } = useIntersection();
+  return (
+    <div
+      ref={ref as React.RefObject<HTMLDivElement>}
+      className={`text-center opacity-0 ${visible ? "animate-fadeInUp" : ""} delay-${delay}`}
+    >
+      <div className="text-5xl md:text-6xl font-black text-gradient mb-2">{value}</div>
+      <div className="text-gray-400 text-sm uppercase tracking-widest">{label}</div>
+    </div>
+  );
+}
+
+export default function Home() {
+  const [scrollY, setScrollY] = useState(0);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const aboutRef = useIntersection();
+  const statsRef = useIntersection();
+  const careerRef = useIntersection();
+  const partnerRef = useIntersection();
+
+  useEffect(() => {
+    const onScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden" ref={heroRef}>
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${HERO_BG})`,
+            transform: `translateY(${scrollY * 0.4}px)`,
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black" />
+
+        {/* Racing stripe */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-700 via-red-500 to-red-700" />
+
+        <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20">
+          <div className="animate-fadeIn mb-6">
+            <span className="inline-block px-4 py-1.5 bg-red-600/20 border border-red-500/30 text-red-400 text-xs font-semibold tracking-[0.2em] uppercase rounded-full">
+              Pilota Tesserato ACI Sport
+            </span>
+          </div>
+          <h1 className="animate-fadeInUp text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight mb-6">
+            Allacciate le cinture.{" "}
+            <span className="text-gradient">Ogni gara</span> è<br className="hidden md:block" />
+            un'occasione per crescere.
+          </h1>
+          <p className="animate-fadeInUp delay-200 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <strong className="text-white">Filippo Ferrari:</strong> Pilota tesserato ACI Sport.{" "}
+            Passione, professionalità e voglia di vincere.
+          </p>
+          <div className="animate-fadeInUp delay-300 flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/chi-sono">
+              <span className="inline-block px-8 py-4 btn-red rounded font-semibold text-base cursor-pointer">
+                Scopri di più
+              </span>
+            </Link>
+            <Link href="/partner">
+              <span className="inline-block px-8 py-4 bg-white/10 border border-white/20 hover:bg-white/15 text-white rounded font-semibold text-base cursor-pointer transition-all">
+                Diventa Partner
+              </span>
+            </Link>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <a
+          href="#about"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-gray-400 hover:text-red-400 transition-colors"
+        >
+          <ChevronDown size={28} />
+        </a>
+      </section>
+
+      {/* Stats */}
+      <section
+        id="about"
+        ref={statsRef.ref as React.RefObject<HTMLElement>}
+        className="py-16 bg-black border-y border-white/5"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((s, i) => (
+              <Stat key={s.label} {...s} delay={(i + 1) * 100} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About */}
+      <section className="py-20 md:py-28">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+            {/* Image */}
+            <div
+              ref={aboutRef.ref as React.RefObject<HTMLDivElement>}
+              className={`relative opacity-0 ${aboutRef.visible ? "animate-slideInLeft" : ""}`}
+            >
+              <div className="relative rounded-2xl overflow-hidden red-glow">
+                <img
+                  src={ABOUT_IMG}
+                  alt="Filippo Ferrari in pista"
+                  className="w-full object-cover"
+                  style={{ aspectRatio: "3/4", maxHeight: "600px", objectFit: "cover" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+              </div>
+              {/* Floating tag */}
+              <div className="absolute -bottom-4 -right-4 bg-red-600 text-white px-5 py-3 rounded-xl font-bold text-sm shadow-lg">
+                About me
+              </div>
+            </div>
+
+            {/* Text */}
+            <div
+              className={`opacity-0 ${aboutRef.visible ? "animate-slideInRight" : ""} delay-200`}
+            >
+              <div className="divider-red mb-4" />
+              <h2 className="text-3xl md:text-4xl font-black text-white mb-6 leading-tight">
+                Una storia nata<br />
+                <span className="text-gradient">a tutta velocità</span>
+              </h2>
+              <div className="space-y-4 text-gray-300 leading-relaxed">
+                <p>
+                  <strong className="text-white">Filippo Ferrari</strong> nasce a Roma nel 2005,
+                  cresce in una famiglia di sportivi e appassionati di motori. Sin da bambino,
+                  influenzato dal padre pilota di moto che ha corso anche la{" "}
+                  <strong className="text-red-400">Parigi-Dakar</strong>, sviluppa una profonda
+                  passione per la velocità.
+                </p>
+                <p>
+                  A soli sette anni inizia con i kart e, dopo anni di esperienza nelle categorie{" "}
+                  <strong className="text-white">125 monomarcia e KZ</strong>, debutta a 16 anni
+                  nella <strong className="text-red-400">Clio Cup</strong>, proseguendo nel turismo
+                  con la <strong className="text-white">Cupra TCR</strong> e, nel 2024, con l'
+                  <strong className="text-red-400">Audi R8 GT3</strong> di{" "}
+                  <strong className="text-white">Tresor Audi Sport Italia</strong>.
+                </p>
+                <p>
+                  Nel 2025 viene selezionato per il contest{" "}
+                  <strong className="text-red-400">Steering Wheel Super Salita</strong> di{" "}
+                  <strong className="text-white">Wolf Racing Cars</strong> con il supporto dell'{" "}
+                  <strong className="text-white">ACI Sport</strong>.
+                </p>
+              </div>
+              <div className="mt-8">
+                <Link href="/chi-sono">
+                  <span className="inline-block px-6 py-3 btn-red rounded font-semibold cursor-pointer">
+                    Scopri di più su di me
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Career Timeline */}
+      <section
+        ref={careerRef.ref as React.RefObject<HTMLElement>}
+        className="py-20 bg-[hsl(0_0%_6%)]"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className={`text-center mb-14 opacity-0 ${careerRef.visible ? "animate-fadeInUp" : ""}`}>
+            <div className="divider-red mx-auto mb-4" />
+            <h2 className="text-3xl md:text-4xl font-black text-white">
+              Il Percorso di{" "}
+              <span className="text-gradient">Carriera</span>
+            </h2>
+          </div>
+
+          <div className="relative max-w-2xl mx-auto">
+            <div className="timeline-line" />
+            <div className="space-y-8">
+              {career.map((item, i) => (
+                <div
+                  key={item.year}
+                  className={`relative pl-14 opacity-0 ${
+                    careerRef.visible ? "animate-slideInRight" : ""
+                  } delay-${(i + 1) * 100}`}
+                >
+                  <div className="absolute left-0 top-0 w-10 h-10 rounded-full bg-red-600 flex items-center justify-center font-bold text-white text-xs shadow-lg shadow-red-900/40">
+                    {item.year.slice(2)}
+                  </div>
+                  <div className="card-hover bg-[hsl(0_0%_8%)] border border-white/5 rounded-xl p-5">
+                    <div className="text-red-400 text-xs font-semibold tracking-widest uppercase mb-1">
+                      {item.year}
+                    </div>
+                    <h3 className="text-white font-bold text-lg mb-1">{item.event}</h3>
+                    <p className="text-gray-400 text-sm">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partner CTA */}
+      <section
+        ref={partnerRef.ref as React.RefObject<HTMLElement>}
+        className="relative py-24 overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${PARTNER_BG})` }}
+        />
+        <div className="absolute inset-0 bg-black/75" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div
+            className={`opacity-0 ${partnerRef.visible ? "animate-fadeInUp" : ""}`}
+          >
+            <div className="divider-red mx-auto mb-6" />
+            <h2 className="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+              Partners in Success
+            </h2>
+            <p className="text-xl text-red-400 font-semibold mb-6">
+              Partner nella nostra corsa al successo...
+            </p>
+            <div className="text-gray-300 max-w-2xl mx-auto mb-4 leading-relaxed">
+              <p>
+                <strong className="text-white">Collaborare insieme a Filippo</strong> significa
+                entrare nel mondo del motorsport con{" "}
+                <strong className="text-red-400">visibilità</strong>,{" "}
+                <strong className="text-red-400">energia</strong> e{" "}
+                <strong className="text-red-400">risultati</strong>.
+              </p>
+            </div>
+            <blockquote className="border-l-4 border-red-500 pl-6 text-left my-8 max-w-2xl mx-auto">
+              <p className="text-gray-300 italic text-lg leading-relaxed">
+                "I miei <strong className="text-white">partner</strong> non sono semplici{" "}
+                <strong className="text-white">sponsor</strong>, ma{" "}
+                <strong className="text-red-400">parte del mio team</strong>: insieme affrontiamo
+                ogni curva con determinazione e tagliamo il traguardo trionfanti."
+              </p>
+            </blockquote>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Link href="/partner">
+                <span className="inline-block px-8 py-4 btn-red rounded font-semibold text-base cursor-pointer">
+                  Diventa Partner
+                </span>
+              </Link>
+              <Link href="/contatti">
+                <span className="inline-block px-8 py-4 bg-white/10 border border-white/20 hover:bg-white/15 text-white rounded font-semibold text-base cursor-pointer transition-all">
+                  Contattami Ora
+                </span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
