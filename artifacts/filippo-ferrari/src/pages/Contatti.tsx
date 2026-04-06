@@ -75,8 +75,10 @@ export default function Contatti() {
     } catch {
       setStatus("error");
     }
-  };
-    <>
+      };
+
+      return (
+        <>
       {/* Hero */}
       <section className="relative h-[38vh] min-h-[260px] flex items-end overflow-hidden">
         <div
