@@ -102,7 +102,7 @@ export default function Contatti() {
                   </div>
                   <div className="flex items-start gap-3">
                     <input type="checkbox" id="gdpr" checked={gdpr} onChange={(e) => setGdpr(e.target.checked)} className="mt-1 w-4 h-4 accent-red-600" />
-                    <label htmlFor="gdpr" className="text-gray-500 text-xs leading-relaxed">Accettazione GDPR * — Inviando il messaggio acconsento al trattamento dei miei dati.</label>
+                    <label htmlFor="gdpr" className="text-gray-500 text-xs leading-relaxed">Accettazione GDPR * — Inviando il messaggio acconsento a che questo sito conservi le informazioni inviate così che possano rispondere alla mia richiesta.</label>
                   </div>
                   {status === "error" && <p className="text-red-400 text-xs">Si prega di compilare tutti i campi obbligatori!</p>}
                   <button type="submit" className="w-full py-4 btn-red rounded-lg font-semibold text-white tracking-wide">Invia</button>
