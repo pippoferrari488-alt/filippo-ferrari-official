@@ -126,7 +126,7 @@ export default function Contatti() {
                 </div>
                 <div className="flex items-start gap-4 card-hover bg-[hsl(0_0%_7%)] border border-white/5 rounded-xl p-5">
                   <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center shrink-0"><MapPin size={18} className="text-red-400" /></div>
-                  <div><div className="text-gray-500 text-xs uppercase tracking-widest mb-1">Indirizzo</div><span className="text-white font-semibold">Via Roma 10</span><div className="text-gray-400 text-sm">Milano, 20121</div></div>
+                  <div><div className="text-gray-500 text-xs uppercase tracking-widest mb-1">Indirizzo</div><span className="text-white font-semibold">Piazza G. Agnelli 10</span><div className="text-gray-400 text-sm">Roma, 00144</div></div>
                 </div>
               </div>
               <div>
