@@ -54,28 +54,28 @@ export default function Contatti() {
   const infoRef = useIntersection();
   const faqRef = useIntersection();
 
-    const handleSubmit = async (e: React.FormEvent) => {
-      e.preventDefault();
-      if (!form.nome || !form.email || !form.messaggio || !gdpr) {
-        setStatus("error");
-        return;
-      }
-      try {
-        const res = await fetch("https://formspree.io/f/xlgoaawj", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            nome: form.nome,
-            email: form.email,
-            messaggio: form.messaggio,
-          }),
-        });
-        if (res.ok) setStatus("sent");
-        else setStatus("error");
-      } catch {
-        setStatus("error");
-      }
-    };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.nome || !form.email || !form.messaggio || !gdpr) {
+      setStatus("error");
+      return;
+    }
+    try {
+      const data = new FormData();
+      data.append("nome", form.nome);
+      data.append("email", form.email);
+      data.append("messaggio", form.messaggio);
+      const res = await fetch("https://formspree.io/f/xlgoaawj", {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" },
+      });
+      if (res.ok) setStatus("sent");
+      else setStatus("error");
+    } catch {
+      setStatus("error");
+    }
+  };
     <>
       {/* Hero */}
       <section className="relative h-[38vh] min-h-[260px] flex items-end overflow-hidden">
