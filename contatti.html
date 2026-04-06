@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contattami</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; max-width: 500px; margin: auto; }
+        form { display: flex; flex-direction: column; gap: 10px; }
+        input, textarea, button { padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #007bff; color: white; cursor: pointer; border: none; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+
+    <h2>Invia un messaggio</h2>
+
+    <form action="https://web3forms.com" method="POST">
+        <!-- METTI LA TUA KEY QUI SOTTO -->
+        <input type="hidden" name="access_key" value="99d3b530-3ae3-4ac5-b304-49e4c1e6d669">
+
+        <input type="text" name="name" placeholder="Il tuo nome" required>
+        <input type="email" name="email" placeholder="La tua email" required>
+        <textarea name="message" rows="5" placeholder="Scrivi qui il tuo messaggio..." required></textarea>
+
+        <!-- Pagina di ritorno dopo l'invio (opzionale) -->
+        <input type="hidden" name="redirect" value="https://web3forms.com">
+
+        <button type="submit">Invia Messaggio</button>
+    </form>
+
+</body>
+</html>
