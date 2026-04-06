@@ -43,16 +43,18 @@ export default function Contatti() {
       return;
     }
     try {
-      const data = new FormData();
-      data.append("nome", form.nome);
-      data.append("email", form.email);
-      data.append("messaggio", form.messaggio);
-      const res = await fetch("https://formspree.io/f/xlgoaawj", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: data,
-        headers: { "Accept": "application/json" },
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "99d3b530-3ae3-4ac5-b304-49e4c1e6d669",
+          nome: form.nome,
+          email: form.email,
+          messaggio: form.messaggio,
+        }),
       });
-      if (res.ok) setStatus("sent");
+      const json = await res.json();
+      if (json.success) setStatus("sent");
       else setStatus("error");
     } catch {
       setStatus("error");
@@ -130,9 +132,7 @@ export default function Contatti() {
               <div>
                 <h3 className="text-white font-semibold text-sm tracking-widest uppercase mb-5">Seguimi</h3>
                 <div className="flex gap-4">
-                  <a href="https://www.instagram.com/__filippo.ferrari__" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-5 py-3 bg-white/5 border border-white/10 hover:bg-red-600 hover:border-red-600 rounded-xl text-white text-sm font-medium transition-all">
-                    <Instagram size={18} />Instagram
-                  </a>
+                  <a href="https://www.instagram.com/__filippo.ferrari__" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-5 py-3 bg-white/5 border border-white/10 hover:bg-red-600 hover:border-red-600 rounded-xl text-white text-sm font-medium transition-all"><Instagram size={18} />Instagram</a>
                   <a href="https://www.tiktok.com/@fili.ferrari" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 px-5 py-3 bg-white/5 border border-white/10 hover:bg-red-600 hover:border-red-600 rounded-xl text-white text-sm font-medium transition-all">
                     <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.71a8.18 8.18 0 004.78 1.52V6.78a4.85 4.85 0 01-1.01-.09z"/></svg>TikTok
                   </a>
