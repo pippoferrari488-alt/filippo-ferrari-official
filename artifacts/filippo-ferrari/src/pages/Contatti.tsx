@@ -47,13 +47,6 @@ function FaqItem({ q, a }: { q: string; a: string }) {
 }
 
 export default function Contatti() {
-  const [form, setForm] = useState({ nome: "", email: "", messaggio: "" });
-  const [status, setStatus] = useState<"idle" | "sent" | "error">("idle");
-  const [gdpr, setGdpr] = useState(false);
-  const formRef = useIntersection();
-  const infoRef = useIntersection();
-  const faqRef = useIntersection();
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.nome || !form.email || !form.messaggio || !gdpr) {
@@ -75,11 +68,9 @@ export default function Contatti() {
     } catch {
       setStatus("error");
     }
-      };
+  };
 
-      return (
-        <>
-      {/* Hero */}
+  return (
       <section className="relative h-[38vh] min-h-[260px] flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
