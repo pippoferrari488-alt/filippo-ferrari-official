@@ -69,7 +69,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-gray-500 text-sm">
                 <MapPin size={14} className="text-red-500 shrink-0" />
-                Via Roma 10, Milano, 20121
+                Piazza G. Agnelli 10, Roma, 00144
               </li>
             </ul>
           </div>
