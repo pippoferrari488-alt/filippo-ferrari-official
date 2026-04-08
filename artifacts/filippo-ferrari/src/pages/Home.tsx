@@ -73,8 +73,8 @@ export default function Home() {
           </div>
           <h1 className="animate-fadeInUp text-4xl sm:text-5xl md:text-7xl font-black text-white leading-tight mb-6">
             Allacciate le cinture.{" "}
-            <span className="text-gradient">Ogni gara</span> è<br className="hidden md:block" />
-            un'occasione per crescere.
+            <span className="text-gradient">Ogni gara</span> è{" "}<br className="hidden md:block" />
+            <span className="text-gradient">un'occasione per crescere.</span>
           </h1>
           <p className="animate-fadeInUp delay-200 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
             <strong className="text-white">Filippo Ferrari:</strong> Pilota tesserato ACI Sport.{" "}
