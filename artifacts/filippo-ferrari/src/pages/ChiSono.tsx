@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { useIntersection } from "@/hooks/useIntersection";
 
 const HERO_BG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_815/rwdMode_1/2400x420/a-race-car-driving-down-a-race-track.webp";
-const BANNER_IMG = "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_812/0/rwdMode_1/1200x450/4018ABFF-E0BD-430A-8856-8D2CBB3D9F7DJPG.JPG";
+const BANNER_IMG = "https://i.imgur.com/uxCD3UP.jpeg";
 
 const topImages = [
   "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_833/rwdMode_1/308x282/IMG_3647.webp",
