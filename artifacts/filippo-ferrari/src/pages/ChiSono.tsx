@@ -14,7 +14,7 @@ const topImages = [
 const carImages = [
   "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_818/IMG_2687.jpeg",
   "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_819/6467715c-568a-4c6a-8603-b0222b19b85d.JPG",
-  "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_820/IMG_5410.jpeg",
+  "https://i.imgur.com/w9OEbdU.jpeg",
   "https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/webpage_31/mm3aqecy/element_821/IMG_1650.jpg",
 ];
 
