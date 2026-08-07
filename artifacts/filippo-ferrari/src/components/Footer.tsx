@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <img
-                src="https://dadcg8.webwave.dev/files/dynamicContent/sites/dadcg8/images/it/layout_3/mm3aqby7/element_616/ChatGPT-Image-28-gen-2026-23_40_12.png"
+                src="https://i.imgur.com/1TSIWDC.png"
                 alt="Logo"
                 className="h-10 w-auto"
                 onError={(e) => {
