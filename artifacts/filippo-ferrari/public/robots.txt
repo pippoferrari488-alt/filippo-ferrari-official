@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://filippo-ferrari.vercel.app/sitemap.xml
+Sitemap: https://filippo-ferrari-official.vercel.app/sitemap.xml

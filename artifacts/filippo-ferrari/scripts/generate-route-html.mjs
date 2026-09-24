@@ -3,7 +3,7 @@ import path from "node:path";
 
 const dist=path.resolve("dist/public");
 const base=fs.readFileSync(path.join(dist,"index.html"),"utf8");
-const B="https://filippo-ferrari.vercel.app";
+const B="https://filippo-ferrari-official.vercel.app";
 
 const pages={
  "chi-sono":[

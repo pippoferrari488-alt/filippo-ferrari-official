@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useLocation } from "wouter";
 
-const BASE_URL = "https://filippo-ferrari.vercel.app";
+const BASE_URL = "https://filippo-ferrari-official.vercel.app";
 
 const pages: Record<string,{title:string;description:string}> = {
   "/": {
