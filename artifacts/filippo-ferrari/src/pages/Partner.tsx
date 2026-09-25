@@ -267,13 +267,13 @@ export default function Partner() {
 
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
                 <Link href="/contatti">
-                  <span className="inline-flex items-center justify-center gap-2 px-6 py-3.5 btn-red rounded font-semibold cursor-pointer">
+                  <span className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-6 py-3.5 btn-red rounded font-semibold cursor-pointer">
                     Parliamo di Scan The Race <ArrowRight size={17} />
                   </span>
                 </Link>
                 <a
                   href="#scan-demo"
-                  className="inline-flex items-center justify-center px-6 py-3.5 bg-white/10 border border-white/15 hover:bg-white/15 text-white rounded font-semibold transition-all"
+                  className="inline-flex w-full sm:w-auto items-center justify-center px-6 py-3.5 bg-white/10 border border-white/15 hover:bg-white/15 text-white rounded font-semibold transition-all"
                 >
                   Vedi la demo
                 </a>
@@ -490,7 +490,7 @@ export default function Partner() {
       {/* CTA with photo background */}
       <section className="relative py-20 md:py-28 overflow-hidden bg-black">
         <div
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat md:bg-cover"
+          className="absolute inset-0 bg-cover bg-[position:44%_center] bg-no-repeat sm:bg-center"
           style={{ backgroundImage: `url(/site-assets/partner-cta.jpeg)` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/85" />
