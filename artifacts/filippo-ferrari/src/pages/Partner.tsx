@@ -490,7 +490,7 @@ export default function Partner() {
       {/* CTA with photo background */}
       <section className="relative py-20 md:py-28 overflow-hidden bg-black">
         <div
-          className="absolute inset-0 bg-cover bg-[position:44%_center] bg-no-repeat sm:bg-center"
+          className="absolute inset-0 bg-cover bg-[position:40%_center] bg-no-repeat sm:bg-center"
           style={{ backgroundImage: `url(/site-assets/partner-cta.jpeg)` }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/85" />
