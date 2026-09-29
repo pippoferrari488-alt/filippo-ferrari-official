@@ -41,8 +41,8 @@ const phases = [
   },
   {
     period: "2025",
-    title: "ACI Sport Contest",
-    desc: "Viene selezionato per il contest Steering Wheel Super Salita organizzato da Wolf Racing Cars con il supporto di ACI Sport.",
+    title: "Steering Wheel Super Salita",
+    desc: "Viene selezionato per il contest Steering Wheel Super Salita di Wolf Racing Cars, in collaborazione con ACI Sport.",
   },
 ];
 
@@ -93,7 +93,7 @@ export default function ChiSono() {
             </div>
 
             <div className={`space-y-5 text-gray-300 leading-relaxed opacity-0 ${introRef.visible ? "animate-slideInRight delay-400" : ""}`}>
-              <p>Nel <strong className="text-white">2025</strong> viene selezionato per il <strong className="text-red-400">contest Steering Wheel Super Salita</strong> organizzato da <strong className="text-white">Wolf Racing Cars</strong> con il supporto di <strong className="text-white">ACI Sport</strong>.</p>
+              <p>Nel <strong className="text-white">2025</strong> viene selezionato per il <strong className="text-red-400">contest Steering Wheel Super Salita</strong> di <strong className="text-white">Wolf Racing Cars</strong>, in collaborazione con <strong className="text-white">ACI Sport</strong>.</p>
               <p>Per Filippo il motorsport è competizione, ma anche <strong className="text-white">disciplina, preparazione e confronto</strong>. Ogni vettura e ogni esperienza richiedono capacità di adattarsi, ascoltare il team e continuare a costruire il proprio bagaglio da pilota.</p>
               <p>L'obiettivo è continuare a crescere attraverso opportunità sportive sempre più significative, senza legare il percorso a una sola categoria. Lo stesso approccio guida il rapporto con team, partner e professionisti: <strong className="text-red-400">serietà, disponibilità e rispetto del lavoro comune</strong>.</p>
             </div>

@@ -115,9 +115,9 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <Link href="/privacy">
-              <span className="text-gray-600 hover:text-red-400 text-xs transition-colors cursor-pointer">Privacy Policy</span>
+              <span className="inline-flex items-center text-gray-600 hover:text-red-400 text-xs leading-none transition-colors cursor-pointer">Privacy Policy</span>
             </Link>
-            <p className="text-gray-600 text-xs">FIA Silver Driver · Roma, Italia</p>
+            <span className="inline-flex items-center text-gray-600 text-xs leading-none">FIA Silver Driver · Roma, Italia</span>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ const stats = [
   { value: "2005", label: "Anno di nascita" },
   { value: "7", label: "Anni al primo kart" },
   { value: "2024", label: "Audi R8 GT3 · Test" },
-  { value: "2025", label: "ACI Sport Contest" },
+  { value: "2025", label: "Wolf Racing Cars Contest" },
 ];
 
 const career = [
@@ -19,7 +19,7 @@ const career = [
   { year: "2021", event: "Clio Cup", desc: "Debutto nelle competizioni automobilistiche a 16 anni" },
   { year: "2023", event: "Cupra TCR", desc: "Esperienza con la Cupra TCR, proseguendo il percorso nelle vetture turismo" },
   { year: "2024", event: "Audi R8 GT3", desc: "Test con l'Audi R8 GT3 di Tresor Audi Sport Italia, primo confronto diretto con una vettura GT3" },
-  { year: "2025", event: "ACI Sport Contest", desc: "Selezione per Steering Wheel Super Salita di Wolf Racing Cars" },
+  { year: "2025", event: "Steering Wheel Super Salita", desc: "Selezione per il contest di Wolf Racing Cars, in collaborazione con ACI Sport" },
 ];
 
 function Stat({ value, label, delay }: { value: string; label: string; delay: number }) {
@@ -186,7 +186,7 @@ export default function Home() {
                 <p>
                   Nel 2025 viene selezionato per il contest{" "}
                   <strong className="text-red-400">Steering Wheel Super Salita</strong> di{" "}
-                  <strong className="text-white">Wolf Racing Cars</strong> con il supporto dell'{" "}
+                  <strong className="text-white">Wolf Racing Cars</strong>, in collaborazione con{" "}
                   <strong className="text-white">ACI Sport</strong>.
                 </p>
               </div>
