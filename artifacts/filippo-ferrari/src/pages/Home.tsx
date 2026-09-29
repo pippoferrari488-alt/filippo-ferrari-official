@@ -72,7 +72,7 @@ export default function Home() {
                 Italian Racing Driver
               </span>
               <span className="text-xs uppercase tracking-[0.2em] text-gray-400">
-                ACI Sport licensed
+                FIA Silver Driver
               </span>
             </div>
 

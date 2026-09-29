@@ -117,7 +117,7 @@ export default function Footer() {
             <Link href="/privacy">
               <span className="text-gray-600 hover:text-red-400 text-xs transition-colors cursor-pointer">Privacy Policy</span>
             </Link>
-            <p className="text-gray-600 text-xs">ACI Sport licensed · Roma, Italia</p>
+            <p className="text-gray-600 text-xs">FIA Silver Driver · Roma, Italia</p>
           </div>
         </div>
       </div>
