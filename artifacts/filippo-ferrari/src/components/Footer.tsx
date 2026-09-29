@@ -113,11 +113,16 @@ export default function Footer() {
           <p className="text-gray-600 text-xs">
             © {new Date().getFullYear()} Filippo Ferrari. Tutti i diritti riservati.
           </p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy">
-              <span className="inline-flex items-center text-gray-600 hover:text-red-400 text-xs leading-none transition-colors cursor-pointer">Privacy Policy</span>
+          <div className="flex items-center gap-4 text-xs leading-none">
+            <Link
+              href="/privacy"
+              className="flex h-4 items-center text-gray-600 hover:text-red-400 transition-colors"
+            >
+              Privacy Policy
             </Link>
-            <span className="inline-flex items-center text-gray-600 text-xs leading-none">FIA Silver Driver · Roma, Italia</span>
+            <span className="flex h-4 items-center text-gray-600">
+              FIA Silver Driver · Roma, Italia
+            </span>
           </div>
         </div>
       </div>

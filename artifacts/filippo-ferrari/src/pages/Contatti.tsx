@@ -127,7 +127,7 @@ export default function Contatti() {
               <div className="space-y-6 mb-10">
                 <div className="flex items-start gap-4 card-hover bg-[hsl(0_0%_7%)] border border-white/5 rounded-xl p-5">
                   <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center shrink-0"><Phone size={18} className="text-red-400" /></div>
-                  <div><div className="text-gray-500 text-xs uppercase tracking-widest mb-1">Telefono</div><a href="tel:3318975195" className="text-white font-semibold hover:text-red-400 transition-colors">+39 331 897 5195</a></div>
+                  <div><div className="text-gray-500 text-xs uppercase tracking-widest mb-1">Telefono</div><a href="tel:+393318975195" className="text-white font-semibold hover:text-red-400 transition-colors">+39 331 897 5195</a></div>
                 </div>
                 <div className="flex items-start gap-4 card-hover bg-[hsl(0_0%_7%)] border border-white/5 rounded-xl p-5">
                   <div className="w-10 h-10 rounded-full bg-red-600/20 flex items-center justify-center shrink-0"><Mail size={18} className="text-red-400" /></div>
