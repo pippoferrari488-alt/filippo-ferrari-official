@@ -25,7 +25,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed">
-              Motorsport, crescita e partnership costruite con serietà dentro e fuori dalla pista.
+              Passione, professionalità e voglia di vincere. Ogni gara è un'occasione per crescere.
             </p>
           </div>
 
@@ -116,7 +116,7 @@ export default function Footer() {
           <div className="flex items-center gap-4 text-xs leading-none">
             <Link
               href="/privacy"
-              className="flex h-4 items-center text-gray-600 hover:text-red-400 transition-colors"
+              className="relative -top-px flex h-4 items-center text-gray-600 hover:text-red-400 transition-colors"
             >
               Privacy Policy
             </Link>

@@ -28,8 +28,8 @@ const IT_TO_EN: Record<string, string> = {
   "FIA Silver Driver · Roma, Italia": "FIA Silver Driver · Rome, Italy",
   "Filippo Ferrari. Tutti i diritti riservati.":
     "Filippo Ferrari. All rights reserved.",
-  "Motorsport, crescita e partnership costruite con serietà dentro e fuori dalla pista.":
-    "Motorsport, growth and partnerships built with professionalism on and off the track.",
+  "Passione, professionalità e voglia di vincere. Ogni gara è un'occasione per crescere.":
+    "Passion, professionalism and the drive to win. Every race is an opportunity to grow.",
 
   // Home — stats / timeline
   "Anno di nascita": "Year of birth",
