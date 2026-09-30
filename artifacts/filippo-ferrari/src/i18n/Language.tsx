@@ -33,10 +33,10 @@ const IT_TO_EN: Record<string, string> = {
 
   // Home — stats / timeline
   "Anno di nascita": "Year of birth",
-  "Anni al primo kart": "Age at first kart",
+  "Anni al primo kart": "Age at first karting experience",
   "Primo kart 60 Mini": "First 60 Mini kart",
   "A soli sette anni sale per la prima volta su un kart":
-    "At just seven years old, he gets behind the wheel of a kart for the first time",
+    "At just seven years old, he got behind the wheel of a kart for the first time",
   "Debutto nelle competizioni automobilistiche a 16 anni":
     "Car-racing debut at age 16",
   "Esperienza con la Cupra TCR, proseguendo il percorso nelle vetture turismo":
@@ -69,7 +69,7 @@ const IT_TO_EN: Record<string, string> = {
   ", proseguendo nel turismo con la":
     ", continuing in touring cars with the",
   "e, nel 2024, con un test sull'":
-    "and, in 2024, with a test in the",
+    "before moving on in 2024 to a test in the",
   "Nel 2025 viene selezionato per il contest":
     "In 2025 he was selected for the",
   ", in collaborazione con": ", in collaboration with",
@@ -115,7 +115,7 @@ const IT_TO_EN: Record<string, string> = {
     ", beginning the transition from karting to touring cars.",
   "prosegue con la": "he continued with the",
   "arriva il primo confronto con una vettura GT3, attraverso il test con l'":
-    "came his first experience in a GT3 car, through a test in the",
+    ", he had his first direct experience in a GT3 car, testing the",
   "viene selezionato per il": "he was selected for the",
   "Per Filippo il motorsport è competizione, ma anche":
     "For Filippo, motorsport is competition, but also",
@@ -148,7 +148,7 @@ const IT_TO_EN: Record<string, string> = {
     "For racing programmes, professional collaborations and motorsport partnerships.",
   "Le": "The",
   "vetture": "cars",
-  "del percorso": "in the journey",
+  "del percorso": "along the journey",
   "Vai alla Galleria": "View Gallery",
 
   // Partner
@@ -165,7 +165,7 @@ const IT_TO_EN: Record<string, string> = {
     "passion, technology, precision and ambition",
   "Sostenere la carriera di un pilota come":
     "Supporting the career of a driver like",
-  ", significa": "means",
+  ", significa": " means",
   "legare il proprio brand": "connecting your brand",
   "a questi valori e a un": "to these values and to a",
   "progetto giovane, serio e in continua crescita":
@@ -236,7 +236,7 @@ const IT_TO_EN: Record<string, string> = {
   "Una sponsorizzazione motorsport è una collaborazione commerciale basata su attività e prestazioni di comunicazione definite tra le parti, non una semplice donazione.":
     "A motorsport sponsorship is a commercial collaboration based on communication activities and deliverables agreed between the parties, not a simple donation.",
   "Il trattamento fiscale, la deducibilità dei costi e l'IVA dipendono dalla struttura dell'accordo e dalla situazione dell'azienda. Per questo gli aspetti fiscali vanno verificati dal partner con il proprio consulente.":
-    "Tax treatment, cost deductibility and VAT depend on the structure of the agreement and the company's circumstances. The partner should therefore verify tax matters with its own adviser.",
+    "Tax treatment, the deductibility of costs and VAT depend on the structure of the agreement and the company's circumstances. The partner should therefore verify tax matters with its own adviser.",
   "In pratica": "In practice",
   "Accordo commerciale e prestazioni di comunicazione definite con chiarezza.":
     "A clearly defined commercial agreement and communication deliverables.",
@@ -289,7 +289,7 @@ const IT_TO_EN: Record<string, string> = {
     "Images from the racing journey, from the most recent experiences back to the early days in karting.",
   "Momenti dal": "Moments from the",
   "Una selezione continua di immagini dal percorso in pista.":
-    "A continuous selection of images from the journey on track.",
+    "A selection of images tracing the journey on track.",
   "Apri": "Open",
   "Visualizzazione foto": "Photo viewer",
   "Chiudi foto": "Close photo",
@@ -345,10 +345,10 @@ const IT_TO_EN: Record<string, string> = {
   "Titolare del trattamento": "Data controller",
   "Il titolare del trattamento è Filippo Ferrari. Per richieste relative alla privacy è possibile scrivere a":
     "The data controller is Filippo Ferrari. For privacy-related requests, you can write to",
-  "Dati trattati": "Data processed",
+  "Dati trattati": "Data We Process",
   "Attraverso il modulo di contatto possono essere raccolti nome, indirizzo email, contenuto del messaggio e le informazioni che l'utente sceglie volontariamente di inserire.":
     "The contact form may collect your name, email address, message content and any information you voluntarily choose to provide.",
-  "Finalità": "Purpose",
+  "Finalità": "Purpose of Processing",
   "I dati vengono utilizzati per ricevere, gestire e rispondere alle richieste relative a opportunità sportive, partnership, media e collaborazioni professionali.":
     "The data is used to receive, manage and respond to enquiries relating to racing opportunities, partnerships, media and professional collaborations.",
   "Modulo di contatto": "Contact form",
@@ -359,13 +359,23 @@ const IT_TO_EN: Record<string, string> = {
     "Data is retained for the time necessary to handle the request and any resulting relationship, subject to applicable legal obligations.",
   "Diritti dell'interessato": "Data subject rights",
   "Nei casi previsti dalla normativa applicabile è possibile richiedere accesso, rettifica, cancellazione o limitazione del trattamento ed esercitare gli altri diritti riconosciuti dal Regolamento UE 2016/679. È inoltre possibile rivolgersi all'autorità di controllo competente.":
-    "Where provided by applicable law, you may request access, rectification, deletion or restriction of processing and exercise the other rights recognised under EU Regulation 2016/679. You may also contact the competent supervisory authority.",
+    "Where provided by applicable law, you may request access, rectification, deletion or restriction of processing and exercise the other rights recognised under Regulation (EU) 2016/679. You may also contact the competent supervisory authority.",
   "Dati tecnici": "Technical data",
   "Il sito e i servizi tecnici utilizzati per la sua erogazione possono trattare informazioni necessarie al funzionamento e alla sicurezza, come indirizzo IP, informazioni sul browser e log tecnici.":
     "The website and the technical services used to provide it may process information necessary for operation and security, such as IP address, browser information and technical logs.",
   "Contatto privacy": "Privacy contact",
   "Ultimo aggiornamento: settembre 2026.":
     "Last updated: September 2026.",
+
+  // English refinements
+  "Parigi-Dakar": "Paris-Dakar Rally",
+  "125 monomarcia e KZ": "125 single-speed and KZ classes",
+  "Roma, 4 dicembre 2005": "Rome, 4 December 2005",
+  ". È in questo ambiente che nasce la passione di Filippo per le corse.":
+    ". It was in this environment that Filippo's passion for racing began.",
+  ". Nel": ". In",
+  "contest Steering Wheel Super Salita":
+    "Steering Wheel Super Salita contest",
 
   // Small fragments used around highlighted text
   "A": "At",

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { ChevronDown } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
+import { useLanguage } from "@/i18n/Language";
 
 const HERO_BG = "/gallery/audi-r8-gt3/09_IMG_0927.jpg";
 const ABOUT_IMG = "/site-assets/home-about.webp";
@@ -36,6 +37,7 @@ function Stat({ value, label, delay }: { value: string; label: string; delay: nu
 }
 
 export default function Home() {
+  const { language } = useLanguage();
   const [scrollY, setScrollY] = useState(0);
   const heroRef = useRef<HTMLDivElement>(null);
   const aboutRef = useIntersection();
@@ -277,12 +279,21 @@ export default function Home() {
               </p>
             </div>
             <blockquote className="border-l-4 border-red-500 pl-6 text-left my-8 max-w-2xl mx-auto">
-              <p className="text-gray-300 italic text-lg leading-relaxed">
-                "I miei <strong className="text-white">partner</strong> non sono semplici{" "}
-                <strong className="text-white">sponsor</strong>, ma{" "}
-                <strong className="text-red-400">parte del mio team</strong>: insieme affrontiamo
-                ogni curva con determinazione e costruiamo un percorso condiviso dentro e fuori dalla pista."
-              </p>
+              {language === "en" ? (
+                <p className="text-gray-300 italic text-lg leading-relaxed">
+                  "My <strong className="text-white">partners</strong> are not just{" "}
+                  <strong className="text-white">sponsors</strong>, but{" "}
+                  <strong className="text-red-400">part of my team</strong>: together we face every corner
+                  with determination and build a shared journey on and off the track."
+                </p>
+              ) : (
+                <p className="text-gray-300 italic text-lg leading-relaxed">
+                  "I miei <strong className="text-white">partner</strong> non sono semplici{" "}
+                  <strong className="text-white">sponsor</strong>, ma{" "}
+                  <strong className="text-red-400">parte del mio team</strong>: insieme affrontiamo
+                  ogni curva con determinazione e costruiamo un percorso condiviso dentro e fuori dalla pista."
+                </p>
+              )}
             </blockquote>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center mt-8">
               <Link href="/partner">

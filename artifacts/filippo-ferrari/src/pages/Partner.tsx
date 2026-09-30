@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Link } from "wouter";
 import { ArrowRight, CheckCircle, QrCode } from "lucide-react";
 import { useIntersection } from "@/hooks/useIntersection";
+import { useLanguage } from "@/i18n/Language";
 
 const HERO_BG = "/site-assets/internal-hero.webp";
 const IMG1 = "/site-assets/partner-main.jpg";
@@ -52,6 +53,7 @@ const scanSteps = [
 ];
 
 export default function Partner() {
+  const { language } = useLanguage();
   const introRef = useIntersection();
   const benefitsRef = useIntersection();
   const scanRef = useIntersection();
@@ -173,8 +175,16 @@ export default function Partner() {
             >
               <div className="divider-red mb-5" />
               <h2 className="text-3xl font-black text-white mb-3">
-                Cosa può includere una{" "}
-                <span className="text-gradient">partnership</span>
+                {language === "en" ? (
+                  <>
+                    What a <span className="text-gradient">partnership</span> can include
+                  </>
+                ) : (
+                  <>
+                    Cosa può includere una{" "}
+                    <span className="text-gradient">partnership</span>
+                  </>
+                )}
               </h2>
               <p className="text-gray-400 mb-8 leading-relaxed">
                 Ogni collaborazione viene costruita su misura. Visibilità, contenuti e attivazioni vengono definiti in base al programma sportivo, agli obiettivi del partner e alle opportunità realmente disponibili.
