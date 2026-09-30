@@ -377,6 +377,12 @@ const IT_TO_EN: Record<string, string> = {
   "contest Steering Wheel Super Salita":
     "Steering Wheel Super Salita contest",
 
+  // 404
+  "Pagina non trovata": "Page not found",
+  "La pagina che stai cercando non esiste.":
+    "The page you are looking for does not exist.",
+  "Torna alla Home": "Back to Home",
+
   // Small fragments used around highlighted text
   "A": "At",
   "Nel": "In",
