@@ -115,7 +115,7 @@ const IT_TO_EN: Record<string, string> = {
     ", beginning the transition from karting to touring cars.",
   "prosegue con la": "he continued with the",
   "arriva il primo confronto con una vettura GT3, attraverso il test con l'":
-    ", he had his first direct experience in a GT3 car, testing the",
+    ", he had his first direct experience in a GT3 car, testing the ",
   "viene selezionato per il": "he was selected for the",
   "Per Filippo il motorsport è competizione, ma anche":
     "For Filippo, motorsport is competition, but also",
